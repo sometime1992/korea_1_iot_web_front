@@ -1,4 +1,4 @@
-//! e_conditoin.js
+//! e_condition.js
 
 // 자바스크립트의 '제어'문
 // : 조건문, 반복문
@@ -25,20 +25,20 @@ if (number > 0) {
   console.log('양의 정수입니다.');
 }
 
-let stringData = ''; // 빈문자열의 경우 false값으로 인식
-let numberData = 0; // 빈문자열의 경우 false값으로 인식
+let stringData = ''; // 빈 문자열의 경우 false값으로 인식
+let numberData = 0; // 빈 문자열의 경우 false값으로 인식
 
 // false 데이터에 !(not) 연산자를 사용하여 조건문 실행
 if (!stringData) {
   console.log('빈 문자열은 false로 인식됩니다.');
 }
 
-if (numberData) {
+if (!numberData) {
   console.log('0의 값은 false로 인식됩니다.');
 }
 
 //! else문 (그 밖에)
-// : if문과 함꼐 사용
+// : if문과 함께 사용
 // : if문의 주어진 조건이 거짓일 때 실행할 코드 블록을 정의
 
 //* (if) else문의 구조(기본 형태)
@@ -60,16 +60,15 @@ if (number > 0) {
   if (number < 0) {
     console.log('음의 정수입니다.');
   } else {
-    // 두가지 조건식 모두 false인 경우
+    // 두 가지 조건식 모두 false 인 경우
     console.log('0입니다.');
   }
-
 }
 
-//! 3. else-if문
+//! 3. else if문
 // : if와 else 사이에 여러 개의 조건을 추가
 
-//* esle if 문의 구조 (기본 형태)
+//* else if문의 구조 (기본 형태)
 /*
 if (조건1) {
   조건 1이 참인 경우
@@ -81,16 +80,14 @@ if (조건1) {
 } else {
   모든 조건이 거짓일 때 실행되는 코드
 }
-
 */
-
 if (number > 0) {
   // 조건1이 참
   console.log('양의 정수입니다.');
 } else if (number < 0) {
   // 조건1이 거짓 && 조건2가 참
   console.log('음의 정수입니다.');
-  } else {
+} else {
   // 모든 조건이 거짓
   console.log('0입니다.');
 }
@@ -110,9 +107,9 @@ else console.log('양수 X');
 // 13살 이상 20살 미만: 청소년
 // 20살 이상: 성인
 
-let age;
+let age = 14;
 
-if(age < 13) {
+if (age < 13) {
   console.log('어린이');
 } else if (age >= 13 && age < 20) {
   console.log('청소년');

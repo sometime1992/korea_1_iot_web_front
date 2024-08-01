@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <style>
     body {
       width: 70%;
-      max-width: 560px;
+      max-width: 960px;
       margin: 20px auto;
     }
 
@@ -18,11 +18,8 @@
 
       /* align-items */
       align-items: center;
-      /* align-items: baseline; */
-      /* align-items: flex-end; */
-            
+
       /* justify-content */
-      /* justify-content: space-around; */
       justify-content: space-between;
     }
 
@@ -31,56 +28,49 @@
       line-height: 1.5;
     }
 
-    /* 순서 값이 작을수록 주축의 앞을 차지 */
-    #one {
+    /* 순서값이 작을수록 주축의 앞을 차지 */
+    #one { 
       align-self: flex-start; 
       order: 1;
     }
-
-    #two {
+    #two { 
       align-self: flex-end; 
       order: 3;
     }
-
-    #three {
-      align-self: center;  
+    #three { 
+      align-self: center; 
       order: 2;
     }
-
-    #four {
+    #four { 
       align-self: stretch; 
-      order: -1; 
+      order: -1;
     }
-  
     #five {
       order: 2;
-      /* order값이 같으면 코드작성 순으로 출력 */
     }
-
-
   </style>
 </head>
 <body>
 
-<!-- 
-! 1. align-items
-  : "item들"이 "교차축(주축의 90도 방향:세로)"에서의 배치를 결정
-  stretch(기본값) / center(중앙) / flex-start / flex-end / baseline
+  <!--  
+  ! 1. align-items
+    : "item들"이 "교차축(주축의 90도 방향)"에서의 배치를 결정
+    - stretch(기본값) / center(중앙) / flex-start / flex-end / baseline
 
-! 2. align-self
-  : "지정 item"의 "교차축"에서의 배치를 결정
-  >>align-items의 속성값과 동일
+  ! 2. align-self
+    : "지정 item"의 "교차축"에서의 배치를 결정
+    >> align-items의 속성값과 동일
 
-? 3. justify-content
-  : "item들"이 "주축"에서의 배치를 결정
-  - flex-start / flex-end / center / space-around (요소의주위)/ space-between
+  ? 3. justify-content
+    : "item들"이 "주축"에서의 배치를 결정
+    - flex-start / flex-end / center / space-around / space-between
 
   * 4. order
     : flex item 순서 지정 (기본값 0)
     - order 값이 클 수록 나중에 나타남
-    - 순위 값이 동등한 항목은 소스 코드 순서로 나타남
+    - 순위값이 동등한 항목은 소스 코드 순서로 나타남
     - 음수 지정 가능
--->
+  -->
   <div>
     <button id="one">1</button>
     <button id="two">2</button>

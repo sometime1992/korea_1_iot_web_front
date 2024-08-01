@@ -16,21 +16,19 @@
 
 //# 간단한 JS 예제
 
-//웹 문서에서 button이라는 선택자를 요청하여 button에 담기
-const button = document.querySelector('button');
+// 웹 문서에서 button이라는 선택자를 요청하여 button에 담기
+// const button = document.querySelector('button');
 
 // button 요소에 클릭(click)이벤트가 발생할 경우 updateName기능이 실행
-button.addEventListener('click', updateName);
+// button.addEventListener('click', updateName);
 
-// updateName에 대한기능 정의
+// updateName에 대한 기능 정의
 function updateName() {
-  // 프롬프트 창으로 사용자로부터 이름을 입력 받기
-  const name = prompt('Enter new name')
+  // 프롬프트 창으로 사용자로부터 이름을 입력받기
+  const name = prompt('Enter new name');
   // 버튼의 텍스트 내용으로 입력받은 이름을 업데이트
   button.textContent = `Player 1: ${name}`;
-  // `` 주의
-  console.log(`${name}`)
-  // 웹 화면 콘솔에서 확인 가능
+  console.log(`${name}`);
 }
 
 //! 자바스크립트 개발 환경 설정
@@ -43,7 +41,7 @@ function updateName() {
 // - ESLint
 
 console.log('안녕하세요');
-// >> 콜솔 입력 스니펫 (clg)
+// >> 콘솔 입력 스니펫 (clg)
 
 console.log('안녕하세요');
 

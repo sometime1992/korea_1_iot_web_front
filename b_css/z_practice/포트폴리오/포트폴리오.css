@@ -7,10 +7,6 @@
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
-  background-color: var(--light-bg);
-  color: var(--dark-text);
   /* 
   - 외부, 내부 여백 X 
   - 배경색: --light-bg
@@ -20,13 +16,6 @@ body {
 }
 
 header, nav, section, footer {
-  margin: 10px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-
   /* 
   전체 페이지 레이아웃 
   - 내부 여백: 20px
@@ -40,9 +29,6 @@ header, nav, section, footer {
 }
 
 header {
-  background-image: linear-gradient(to right, var(--main-color), var(--accent-color));
-  color: white;
-  text-shadow: 1px 0px 2px black;
   /*  
   - 배경색: 선형 그라데이션(오른쪽 방향, 메인 > 강조)
   - 글자색: 흰색
@@ -51,13 +37,10 @@ header {
 }
 
 header h1, header p {
-  text-align: center;
   /* 글자 정렬 - x축 기준 가운데 정렬 */
 }
 
 nav {
-  background-color: white;
-  padding: 5px;
   /* 네비게이션 바 배경색: 흰색 */
   /* 내부 여백 상하: 5px */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -65,9 +48,6 @@ nav {
 }
 
 nav ul {
-  display: inline;
-  list-style: none;
-  padding: 0px;
   /*  
   - 리스트는 수평 배치, 중앙에 정렬
   - 스타일이 없는 리스트를 설정
@@ -77,19 +57,11 @@ nav ul {
 }
 
 nav ul li {
-  margin: 1em auto 2em;
   /* 좌우 마진: 10px */
 }
 
 
 nav ul li a {
-  text-decoration: none;
-  color: var(--dark-text);
-  font-weight: bold;
-  margin: 10px;
-  padding: 5px 10px;
-  border: 2px;
-  transition: all 0.3s ease-in-out;
   /*
   
   링크 밑줄 없음
@@ -104,10 +76,6 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background-color: var(--main-color);
-  color: white;
-  border-color: var(--accent-color);
-  border-radius: 5px;
   /*
     - 배경색: --main-color
     - 텍스트 색상: 흰색
@@ -117,8 +85,6 @@ nav ul li a:focus {
 }
 
 section h2 {
-  border-bottom: 3px var(--accent-color);
-  padding-bottom: 10px;
   /*
     - 하단에 3px 두께의 --accent-color 테두리
     - 하단 패딩: 10px
@@ -128,8 +94,6 @@ section h2 {
 table,
 th,
 td {
-  border: solid var(--light-text) 1px;
-  border-collapse: collapse;
   /*
     - 테두리 색상: --light-text, 1px 두께
     - 테두리 병합 스타일
@@ -138,8 +102,6 @@ td {
 
 th,
 td {
-  padding: 10px;
-  text-align: center;
   /*
     - 패딩: 10px
     - 텍스트 중앙 정렬
@@ -147,8 +109,6 @@ td {
 }
 
 th {
-  background-color: var(--main-color);
-  color: white;
   /*
     - 배경색: --main-color
     - 텍스트 색상: 흰색
@@ -156,11 +116,6 @@ th {
 }
 
 footer {
-  background-color: var(--dark-text);
-  color: var(--light-text);
-  text-align: center;
-  padding: 15px;
-  font-size: 0.8em;
   /*
   - 배경색: --dark-text
   - 텍스트 색상: --light-text
@@ -171,9 +126,6 @@ footer {
 }
 
 footer a {
-  background-color: var(--accent-color) ;
-  text-decoration: none;
-
   /*
   - 링크 색상: --accent-color
   - 밑줄 없음
@@ -182,7 +134,6 @@ footer a {
 }
 
 footer a:hover {
-  background-color: var(--main-color);
   /*
   - 호버 시 색상 변경: --main-color
   */
@@ -190,15 +141,12 @@ footer a:hover {
 
 @media (max-width: 768px) {
   nav ul {
-  
     /*
     - 방향 변경: 수직 배치
     */
   }
 
   header, nav, section, footer {
-    margin: 0px;
-    border-radius: 0px;
     /*
     - 마진 제거
     - 둥근 테두리 제거
@@ -206,9 +154,6 @@ footer a:hover {
   }
 
   nav ul li {
-    display: block;
-    text-align: center;
-    padding: 10px;
     /*
     - 블록 디스플레이
     - 텍스트 중앙 정렬
@@ -218,7 +163,6 @@ footer a:hover {
 }
 
 @keyframes fadeIn {
-  
   /*
   페이드인 애니메이션 효과:
   - 0%: 투명

@@ -7,10 +7,10 @@
 // - 명명규칙
 
 //* 필수 변수 명명규칙
-// 첫문자로 영문자, 언더스코어_, 달러$만 사용 가능 (이후 숫자 사용 가능)
+// 첫문자로 영문자, 언더스코어, 달러만 사용 가능 (이후 숫자 사용 가능)
 // 띄어쓰기 허용 X
 // 기호는 _, $만 사용 가능
-// 영어 대소문자를 구별 (numeber, Number는 각각 다른 변수)
+// 영어 대소문자를 구별 (number, Number는 각각 다른 변수)
 // 예약어 사용 X
 
 // let 1num; - Error
@@ -23,8 +23,8 @@
 // cf. UpperCamelCase
 // : 시작을 포함하여 이어지는 단어의 시작만 대문자로 작성
 
-// now, _now, now$25, now_25 (o)
-// 25now, now 25m, *now (x)
+// now, _now, now$25, now_25 (O)
+// 25now, now 25, *now (X)
 
 //? 변수명 지정 시 의미 있는 단어 사용을 권장
 // 올해 연도: currentYear
@@ -36,7 +36,7 @@
 //! JS 변수 선언 방식 (2가지 - let, var)
 
 // - 변수 선언 방법
-// 변수 종류 변수명;
+// 변수종류 변수명;
 
 // - 변수 할당(대입)
 // 변수명 = 데이터(값);
@@ -51,23 +51,22 @@ letVariable = 10;
 varVariable = 'Hello World';
 
 // 호이스팅 효과로 선언 전에 값 할당이 가능
-// let 호이스팅 효과로 선언 전에 가능하지만 이름이 같으면 노드에서 오류가 나온다.
 // letVariable2 = 10;
-// varVariable2 = '안녕';
+varVariable2 = '안녕';
 
 let letVariable2 = 20;
 var varVariable2 = '안녕 변수';
 
 //! let VS var
 // 공통점
-// : 재할당 가능 (변수의 특성), 호이스팅 o
+// : 재할당 가능 (변수의 특성), 호이스팅 O
 
 // 차이점
 // let: 동일한 영역 내에서 같은 이름으로 재선언 불가
 // var: 동일한 영역 내에서 같은 이름으로 재선언 가능 (사용 X)
 
-// let letVariable2;
-// - 불록 범위 변수 'letVariable2'을(를) 다시 선언할 수 없습니다.
+// let letVariable2; 
+// - 블록 범위 변수 'letVariable2'을(를) 다시 선언할 수 없습니다.
 
 var varVariable2; // 사용 X
 
@@ -87,18 +86,17 @@ birthYear = prompt('태어난 연도를 입력해주세요.');
 age = currentYear - birthYear;
 
 // 변수와 문자열을 동시 출력
-// : +(연산자)를 사용하영 연결 가능
-document.write(birthYear + '년에 태어난 사람의 나이는 ' + age + '세입니다.')
+// : +(연산자)를 사용하여 연결 가능
+document.write(birthYear + '년에 태어난 사람의 나이는 ' + age + '세입니다.');
 
 //! 상수(constant)
 // : 변하지 않는 수
 // : 한 번 할당된 값을 변경할 수 X (재할당 불가)
 
 //? 상수 명명 규칙 (필수 - 변수와 동일)
-
 //* 권장 사항
 // : UPPER_SNAKE_CASE
-// : 모든 영문자를 대문자, 이어지는 단어의 언더스코어(_)로 구분
+// : 모든 영문자를 대문자, 이어지는 단어는 언더스코어(_)로 구분
 
 // 상수 선언과 초기화 - 반드시! 선언과 동시에! 할당!
 // const 변수명 = 데이터(값);
@@ -110,6 +108,3 @@ const PI = 3.14;
 let radius = prompt('반지름을 입력해주세요.');
 
 console.log('반지름: ', radius * radius * PI);
-
-
-
