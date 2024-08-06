@@ -2,7 +2,6 @@
 
 //! 기타 배열의 고급 메서드 (고차함수)
 
-
 //# 1. reduce()
 // : 배열의 각 요소에 대해 함수를 적용하여 '단일 값을 생성'
 
@@ -10,7 +9,7 @@
 /*
 ? reduce 메서드의 인자값: 콜백함수, 초기값(initialValue)
 배열명.reduce((accumulator, currentValue, currentIndex, array) => {
-
+  
 }, initialValue);
 */
 
@@ -18,7 +17,7 @@
 // 1. accumulator - 각각의 순회마다 축적되는 값
 
 // >> 이전 작업물의 반환값 (이전 리듀서 호출의 반환값)
-// : 첫 번째 호출에서는 initialValue 값이 지정
+// : 첫 번째 호출에서는 initialValue값이 지정
 
 // 2. currentValue - 현재 순회되는 요소
 
@@ -28,15 +27,16 @@
 // +) initialValue
 // : 초기값, 생략 시 배열의 첫 번째 요소값 (선택)
 
-//# === reduce 예시 === 
+//* === reduce 예시 ===
 
 let numbers = [1, 2, 3, 4];
 
-let sum = numbers.reduce((acc, value) =>  acc + value, 0);
+let sum = numbers.reduce((acc, value) => acc + value, 0);
 
-console.log(sum);
 // acc += value
 // acc = acc + value
+
+console.log(sum);
 
 //? cf) 배열의 고차함수(콜백함수) 사용 시 (forEach 제외)
 // 중괄호 사용의 경우
@@ -50,20 +50,19 @@ console.log(sum);
 let cars = ['audi', 'bmw', 'hyundai', 'kia'];
 
 let combinedCar = cars.reduce((acc, car) => {
-  return acc + ', ' + car;
+  return acc +  ', ' + car;
 });
 
-console.log(combinedCar); // audi, bmw, hyundai, kia 하나의 문자열
+console.log(combinedCar); // audi, bmw, hyundai, kia
 console.log(typeof combinedCar); // string
 
 //# 2. sort(): 배열의 요소를 정렬(오름차순)
-let numbersArray = [3, 1, 5, 2, 7, 6]; // [ 1, 2, 3, 5, 6, 7 ]
+let numberArray = [3, 1, 5, 2, 7, 6]; // [ 1, 2, 3, 5, 6, 7 ]
 
-console.log(numbersArray.sort());
-
+console.log(numberArray.sort());
 
 //# 3. reverse(): 배열의 요소를 정렬(내림차순)
-console.log(numbersArray.reverse()); // [ 7, 6, 5, 3, 2, 1 ]
+console.log(numberArray.reverse()); // [ 7, 6, 5, 3, 2, 1 ]
 
 //# 4. 배열의 요소를 검색 & 평가
 

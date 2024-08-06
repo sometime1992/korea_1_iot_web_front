@@ -59,11 +59,12 @@ console.log(containsElement([1, 2, 3, 4, 5], 3)); // true
 console.log(containsElement([1, 2, 3, 4, 5], 6)); // false
 
 //! 4. 배열 평균 구하기
+
 function findAverage(array) {
   let sum = 0;
   let length = array.length;
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < length; i++) {
     sum += array[i];
   }
 
@@ -81,7 +82,7 @@ function findMax(array) {
   let length = array.length;
 
   for (let i = 1; i < length; i++) {
-    if(array[i] > max) {
+    if (array[i] > max) {
       max = array[i];
     }
   }
@@ -90,4 +91,4 @@ function findMax(array) {
 }
 
 console.log(findMax([10, 3, 45, 78, 6])); // 78
-console.log(findMax([10, 3, 45, 38, 6])); // 48
+console.log(findMax([10, 3, 45, 38, 6])); // 45

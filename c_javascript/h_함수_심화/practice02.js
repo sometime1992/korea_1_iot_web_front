@@ -1,7 +1,7 @@
 // practice02.js
 
 //! 단어 필터링
-const words = ['apple', 'monkey', 'banna', 'pig', 'grape', 'elephant'];
+const words = ['apple', 'monkey', 'banana', 'pig', 'grape', 'elephant'];
 
 const filteredWords = (words, substring) => {
   // includes 메서드
@@ -10,4 +10,4 @@ const filteredWords = (words, substring) => {
 }
 
 const containsA = filteredWords(words, 'a');
-console.log(containsA);
+console.log(containsA); // [ 'apple', 'banana', 'grape', 'elephant' ]

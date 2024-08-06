@@ -3,7 +3,7 @@
 //! 자바스크립트의 배열
 
 //# 1. 배열이란?
-// : '여러 개'의 데이터를 '순차적'으로 나열한 자료 구조
+// '여러 개'의 데이터를 '순차적'으로 나열한 자료 구조
 // : 다양한 타입을 하나의 배열에 저장 가능
 // : 0부터 시작하는 인덱스 번호를 가짐(1씩 증가)
 
@@ -14,7 +14,6 @@
 // : 집합적 데이터 관리 용이
 // : 순차적 접근
 // : 다양한 데이터 타입을 함께 저장
-
 
 //# 3. 배열 생성
 
@@ -41,7 +40,7 @@ const basketball = '농구';
 
 // 1) 요소 접근
 // 배열명[인덱스번호]
-console.log(sports[1]);
+console.log(sports[1]); // 야구
 
 // 2) 요소 수정
 // 배열명[인덱스번호] = 수정 데이터 할당
@@ -53,17 +52,17 @@ console.log(sports); // [ '축구', '야구', 'basketball' ]
 // >> 변수에 값이 아닌 '메모리 주소를 저장'하여 '참조'
 
 //? 배열의 길이
-// : 배열명.lenth 속성
+// : 배열명.length 속성
 // >> 배열의 마지막 요소 인덱스 번호 === 배열의 길이 - 1
-console.log(sports.length);
+console.log(sports.length); // 3
 
-sports.length = 6;
-//undefined - 배열의 길이를 늘리면 새 요소는 'undefined'로 초기화
+sports.lenght = 6;
+// undefined - 배열의 길이를 늘리면 새 요소는 'undefined'로 초기화
 console.log(sports[3]); 
-console.log(sports);
+console.log(sports); 
 
 sports[5] = '배구';
-console.log(sports);
+console.log(sports); 
 
 //# 5. 배열 탐색 및 정보 확인
 // : 자바스크립트의 배열이 가지는 기본 기능(함수)
@@ -71,59 +70,59 @@ console.log(sports);
 
 let snacks = ['칸쵸', '초코송이', '포테토칩', '초코송이'];
 
-//! 1) indexof()***
-// : 배열의 지정된 요소를 찾고 그 요소의 첫 번쨰 인덱스를 반환 (없으면 -1 반환)
+// 1) indexOf()***
+// : 배열의 지정된 요소를 찾고 그 요소의 첫 번째 인덱스를 반환 (없으면 -1 반환)
 console.log(snacks.indexOf('초코송이')); // 1
 console.log(snacks.indexOf('꼬깔콘')); // -1
 
-//! 2) lastindexof()**
+// 2) lastIndexOf()**
 // : 배열의 끝부터 시작하여 요소를 탐색 (없으면 -1 반환)
-console.log(snacks.indexOf('초코송이')); // 3 
+console.log(snacks.lastIndexOf('초코송이')); // 3
 
-//! 3) includes()*****
+// 3) includes()*****
 // : 배열에 특정 요소가 존재하는지 확인
 // : 해당 결과를 불리언 값으로 반환
-let hasPotao = snacks.includes('포테토칩');
-console.log(hasPotao); // true
+let hasPotato = snacks.includes('포테토칩');
+console.log(hasPotato); // true
 
 //# 6. 배열 조작 함수(기능)
-fruits = ['Apple', 'Banna'];
+fruits = ['Apple', 'Banana'];
 
-//! 1) 요소 추가
-// push()*****: 배열의 끝에 하나 이상의 요소를 추가
+// 1) 요소 추가
+// push()*****: 배열의 끝에 하나 이상의 요소를 추가 
 // >> 수정된 배열의 길이를 반환
 let newLength = fruits.push('Cherry');
 console.log(newLength); // 3
 
-//! 2) 요소 삭제
+// 2) 요소 삭제
 // pop()*****: 배열의 마지막 요소를 제거, 그 제거된 요소를 반환(빈 배열은 undefined 반환)
 let lastFruit = fruits.pop();
 console.log(lastFruit); // Cherry
 
-//! +) shift()
+// +) shift()
 // : 배열의 첫 번째 요소를 제거, 반환
 let firstFruit = fruits.shift();
 console.log(firstFruit); // Apple
 
-//! +) unshift()
+// +) unshift()
 // : 배열의 시작 부분에 하나 이상의 요소를 추가 - 수정된 배열의 길이 반환
 newLength = fruits.unshift('Strawberry');
-console.log(newLength);
+console.log(newLength); // 2
 
 // +) splice()***
 
 // splice(시작 인덱스, 삭제할 요소의 개수) - 삭제
 let removedFruit = fruits.splice(1, 1);
-console.log(removedFruit); // [ 'Banna' ]
+console.log(removedFruit); // [ 'Banana' ]
 
 // splice(시작 인덱스, 0, 아이템 나열, ...) - 추가
 fruits.splice(1, 0, 'Mango', 'Peach');
-console.log(fruits);// [ 'Strawberry', 'Mango', 'Peach' ]
+console.log(fruits); // [ 'Strawberry', 'Mango', 'Peach' ]
 
 // 3) 요소 정렬 & 순서 변경
 
-//! sort()*****: 배열 요소 정렬 (오름차순)
+// sort()*****: 배열 요소 정렬 (오름차순)
 console.log(fruits.sort()); // [ 'Mango', 'Peach', 'Strawberry' ]
 
-//! reverse()*****: 배열 요소 정렬 (내림차순)
+// reverse(): 배열 요소 정렬 (내림차순)
 console.log(fruits.reverse()); // [ 'Strawberry', 'Peach', 'Mango' ]

@@ -25,6 +25,7 @@ while (true) {
   //   , 콘솔창에 안내 메시지를 출력
 
   if (number >= 1 && number <= 9) { // number: 'N'단 * 1 ~ 9
+    console.log(`=====${number}단=====`);
     for (let i = 1; i <= 9; i++) {
       console.log(`${number} X ${i} = ${number * i}`);
     }

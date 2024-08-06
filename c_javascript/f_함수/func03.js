@@ -4,7 +4,7 @@
 
 //# 1. 기본 매개변수 (default)
 // : 함수에 인자를 전달하지 않았을 때 사용되는 기본값을 정의
-// : 함수 호출 시 특정 매개변수(기본 매개변수) 생략이 가능
+// : 함수 호출 시 특정 매개변수(기본 매개변수) 생략이 가능 
 
 //* 구현 방법
 function defaultFunc(param1=value1, param2=value2) {
@@ -13,11 +13,11 @@ function defaultFunc(param1=value1, param2=value2) {
 // 데이터 전달에 대한 선택이 있는 파라미터의 경우
 // , 무조건적인 값이 필요한 데이터보다 뒤에 작성
 function greet1(age, name='비회원고객') {
-  console.log(`안녕하세요, ${name}님, ${age}세 입니다.`);
+  console.log(`안녕하세요, ${name}님, ${age}세입니다.`);
 }
 
 greet1(50);
-greet1(50, '최준혁');
+greet1(50, '이승아');
 
 //# 2. 가변 매개변수
 // : 함수가 받을 수 있는 매개변수의 수가 변할 수 있다는 것을 의미
@@ -35,7 +35,7 @@ function spreadFunc(num1, num2, ...nums) {
 }
 
 function print(num1, num2, ...nums) {
-  // nunms: 배열
+  // nums: 배열
   console.log(nums);
 }
 
@@ -51,4 +51,4 @@ function findMin(...numbers) {
   return minNumber;
 }
 
-console.log(findMin(31, 25, 63, 36, 24)); //24
+console.log(findMin(31, 25, 63, 36, 24)); // 24
