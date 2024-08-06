@@ -76,7 +76,7 @@ function square1(x) {
   // 변수 = 최종 반환값;
   // return 변수;
 
-  return dluble;
+  return double;
   // return을 만나면 종료
   // console.log('함수의 return 뒤에 나오는 로직');`
 }
