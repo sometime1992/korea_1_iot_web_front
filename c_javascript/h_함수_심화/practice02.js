@@ -6,8 +6,16 @@ const words = ['apple', 'monkey', 'banana', 'pig', 'grape', 'elephant'];
 const filteredWords = (words, substring) => {
   // includes 메서드
   // : 배열, 문자열의 데이터에서 인자값이 포함되어있는지를 검사
-  return words.filter(word => word.includes(substring));
+  return words.filter((word) => {return word.includes(substring)});
 }
 
 const containsA = filteredWords(words, 'a');
 console.log(containsA); // [ 'apple', 'banana', 'grape', 'elephant' ]
+
+// let searchword = (words, substring) => {
+//   return words.filter((word) => {
+//     return word.includes(substring);
+//   })
+// }
+
+console.log(words.includes('apple'));

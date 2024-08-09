@@ -21,6 +21,7 @@ function passingScores(scores) {
 
   // 60점 이상인 점수들의 평균
   const passingAverage = passing.reduce((acc, score) => acc + score, 0) / passingCount;
+  
 
   // 각각의 변수값을 하나의 배열로 반환
   return [passingCount, passingAverage];
