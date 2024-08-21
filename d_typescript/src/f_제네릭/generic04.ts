@@ -80,5 +80,49 @@ console.log(users[1]); // { name: '박찬우', age: 20 }
 // : Readonly<T>
 
 interface Human {
-  
+  name: string;
+  age: number;
+}
+
+let user: Readonly<Human> = {
+  // 갑의 변경이 안되는 옵션
+  name: '이승아',
+  age: 50
+}
+
+// user.name = '서호영'; 값의 변경이 안됨
+
+//! 3) Omit (생략하다) - 중요
+// : 특정 속성을 제거한 타입을 반환
+// : 필요한 속성만 가지고와서 사용할때 사용
+// : Omit<T, K>
+// >> T타입에서 K속성을 제거
+
+interface Employee {
+  id: number;
+  name: string;
+  age: number;
+  position: string;
+}
+
+// interface EmployeeNoId {
+//   id: number;
+//   name: string;
+//   age: number;
+//   position: string;
+// }
+
+type EmployeeWithoutID = Omit<Employee, 'id'>; // Employee에서 id만 제외
+
+const newEmployee: EmployeeWithoutID = {
+  name: '성찬영',
+  age: 30,
+  position: '개발자'
+}
+
+const totalData: Employee = {
+  id: 3,
+  name: '홍동현',
+  age: 20,
+  position: '총무'
 }
