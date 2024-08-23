@@ -69,6 +69,7 @@ function renderPhotos(photos: Photo[]) {
   const container = document.getElementById('photo-container') as HTMLElement;
 
   container.innerHTML = '';
+  //비동기 작업이기 때문에 비워두고 실행을 하는 것이 조금 더 빠르게 실행된다
 
   // 각 사진에 대한 HTML 요소 생성
   photos.forEach(photo => {
