@@ -91,7 +91,7 @@ let cars = ['audi', 'bmw', 'volvo', 'hyundai'];
 
 // 1. 전체 배열의 요소를 순회하여 출력 - forEach (콘솔 출력)
 cars.forEach((car) => {
-  console.log(car);
+  return console.log(car);
 });
 
 // 2. 전체 배열의 요소를 대문자(영문자)로 변환 - map

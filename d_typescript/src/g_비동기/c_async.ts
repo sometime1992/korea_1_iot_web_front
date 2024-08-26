@@ -15,7 +15,7 @@ export const tmp = '';
 
 //! async(비동기처리) - 외부, 내부적으로 적용되서 작업 시간이 빠른 다른 작업부터 먼저 실행
 async function fetchUserData() {
-  // 외부와의 연결 시 발생할 오류룰 방지
+  // 외부와의 연결 시 발생할 오류를 방지
   // : try - catch 블록 사용
   try {
     // 실행할 로직을 작성
@@ -33,7 +33,7 @@ async function fetchUserData() {
     }
 
     const data = await response.json();
-    // json으로 변환하는 작업도 오래 걸리기 떄문에 await
+    // json으로 변환하는 작업도 오래 걸리기 때문에 await
     console.log(`가져온 데이터: ${data}`, data);
     // 객체와 배열은 템플릿 리터럴 `${}` 내부에서 출력 할 경우
     // : 데이터 그 자체가 출력되지 X
@@ -43,4 +43,4 @@ async function fetchUserData() {
 }
 
 fetchUserData();
-console.log('hello');
+console.log('hello'); 

@@ -94,6 +94,8 @@ let upperCaseFruits = fruits.map(function (value, index, array) {
   return value.toUpperCase();
 });
 
+// let upperCaseFruits = fruits.map(value => value.toUpperCase());
+
 // cf) 배열메서드의 콜백함수는 주로 화살표 함수 형태
 fruits.map(value => value.toUpperCase());
 
