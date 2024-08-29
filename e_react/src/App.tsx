@@ -1,5 +1,6 @@
 import React from 'react';
 import Basic from './pages/a_basic';
+import Todos01 from './pages/z_todos';
 import { Route, Routes } from 'react-router-dom';
 
 import Hooks from './pages/b_hooks'
@@ -20,6 +21,7 @@ function App() {
         {/* element 속성: 해당 path속성과 일치할 경우 보여질 컴포넌트 */}
         <Route path='/basic' element={<Basic />} />
         <Route path='/hooks' element={<Hooks />} />
+        <Route path='/todos01' element={<Todos01 />} />
       </Routes>
       
 
