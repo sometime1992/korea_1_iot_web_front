@@ -26,10 +26,6 @@ function ChildComponent(props: { name: string }) {
   )
 }
 
-type MultiPropsType = {
-  name: string;
-  colorProps: string;
-}
 
 // 여러 개의 Props 전달과 비구조화 할당(구조 분해)
 // : 객체나 배열에서 해당 묶음 구조를 풀이해서 작성
@@ -43,6 +39,10 @@ type MultiPropsType = {
 // a = 1;
 // b = 2;
 
+type MultiPropsType = { 
+  name: string;
+  colorProps: string;
+}
 function MultiProps({ name, colorProps }: MultiPropsType) {
   // {name, age}의 매개변수에
   // 데이터 person을 전달 (person = {name: '이승아', age: 50})
@@ -53,13 +53,15 @@ function MultiProps({ name, colorProps }: MultiPropsType) {
   )
 }
 
-// 기본 속성값 지정
+//! 기본 속성값 지정
 // : 컴포넌트 호출 시 props를 전달하지 않을 경우 지정될 기본값
 // 컴포넌트명.defaultProps = { 기본속성: '기본값' }
 MultiProps.defaultProps = {
   name: '황상기'
 }
 
+
+//!Props01은 MultiProps,ChildComponent의 부모
 export default function Props01() {
   const props = {
     colorProps: 'orange',

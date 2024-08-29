@@ -12,6 +12,9 @@ import MainComponent from './b_Component';
 import MainJSX from './c_JSX';
 import Rendering01 from './f_Rendering/Rendering01';
 import Rendering02 from './f_Rendering/Rendering02';
+import Handler01 from './g_Handler/Handler01';
+import Handler02, { ChildComponent } from './g_Handler/Handler02';
+import Handler03 from './g_Handler/Handler03';
 
 export default function index() {
   return (
@@ -38,6 +41,12 @@ export default function index() {
       <h2>f_Rendering 리액트의 조건부 렌더링</h2>
       <Rendering01/>
       <Rendering02/>
+
+      <h2>g_Handler 리액트의 이벤트 핸들러</h2>
+      <Handler01/>
+      <Handler02/>
+      <Handler03/>
+      <ChildComponent count={1234} />
     </div>
   )
 }
