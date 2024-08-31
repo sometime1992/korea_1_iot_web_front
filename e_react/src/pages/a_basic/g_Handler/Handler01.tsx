@@ -17,33 +17,32 @@ interface ConsoleProps {
   children: React.ReactNode; // HTML 요소 + 사용자 정의 컴포넌트
 }
 
-
 // 자식 컴포넌트
 // >> 부모 컴포넌트에서 속성으로 문자열 message의 값과
 //    해당 컴포넌트 태그들 사이에 내용을 전달 받음
-function Consolebutton({ message, children} : ConsoleProps) {
+function ConsoleButton({ message, children } : ConsoleProps) {
+  // const message = 'A를 동작';
+  
   return (
-    <button onClick={() => { console.log(`${message}`);  }}>
+    <button onClick={() => { console.log(`${message}`); }}>
       {children}
     </button>
   )
 }
 
 export default function Handler01() {
-
   function handleButtonClick() {
     console.log('버튼을 클릭하였습니다.');
   }
-
   return (
     <div>
-      {/*
-      버튼 요소에 이벤트 등록 
-      >> prop에 이벤트를 '전달'
-      >> on 속성으로 작성
-        - 속성의 중괄호 내에 JS 기능을 명시 (이벤트 핸들러)
+      {/* 
+        버튼 요소에 이벤트 등록 
+        >> prop에 이벤트를 '전달'
+        >> on속성으로 작성 
+          - 속성의 중괄호 내에 JS 기능을 명시 (이벤트 핸들러)
 
-      +) 이벤트 핸들러의 함수는 호출 X, 등록되어야 한다.
+        +) 이벤트 핸들러의 함수는 호출 X, 등록되어야 한다.
       */}
       <button onClick={handleButtonClick}>클릭</button>
 
@@ -56,17 +55,14 @@ export default function Handler01() {
       }}>클릭3</button>
 
       {/* 핸들러에 데이터 전달 */}
-      <Consolebutton message='A를 동작'>
-        {/*
-        ReactNode를 전달 할 경우 HTML 요소의 '내용' 전달 가능 
-        웹 페이지 버튼에 'A를 동작 시키는 버튼'이라는 내용을 ReactNode로 전달
-        */}
-        A를 동작 시키는 버튼
-      </Consolebutton>
-      <Consolebutton message='B를 동작'>
-        {/* ReactNode(B를 동작 시키는 버튼)를 전달(no로 받아옴) 할 경우 HTML 요소의 '내용' 전달 가능 */}
-        B를 동작 시키는 버튼
-      </Consolebutton>
+      <ConsoleButton message='A를 동작'>
+        {/* ReactNode를 전달 할 경우 HTML 요소의 '내용' 전달 가능 */}
+        A를 동작시키는 버튼
+      </ConsoleButton>
+      <ConsoleButton message='B를 동작'>
+        {/* ReactNode를 전달 할 경우 HTML 요소의 '내용' 전달 가능 */}
+        B를 동작시키는 버튼
+      </ConsoleButton>
     </div>
   )
 }

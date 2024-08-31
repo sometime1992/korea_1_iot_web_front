@@ -39,13 +39,13 @@ export default function index() {
       <Props02 />
 
       <h2>f_Rendering 리액트의 조건부 렌더링</h2>
-      <Rendering01/>
-      <Rendering02/>
+      <Rendering01 />
+      <Rendering02 />
 
       <h2>g_Handler 리액트의 이벤트 핸들러</h2>
-      <Handler01/>
-      <Handler02/>
-      <Handler03/>
+      <Handler01 />
+      <Handler02 />
+      <Handler03 />
       <ChildComponent count={1234} />
     </div>
   )

@@ -34,7 +34,6 @@ export default function Rendering02() {
     },
   ];
 
-  //! 배열(map, filter)을 HTML로 바로 출력할 수 없기 떄문에 UI에 담아서 출력
   // map 콜백함수를 사용한 배열 렌더링
   // >> 요소 개수의 변화 X
   //   : 전체 내용을 렌더링
