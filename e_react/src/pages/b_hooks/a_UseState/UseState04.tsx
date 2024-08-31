@@ -37,9 +37,9 @@ interface IFormData {
 export default function UseState04() {
   //! 폼 데이터 상태 관리
   const [formData, setFormData] = useState<IFormData>({
-    id: '',
-    password: '',
-    email: '',
+    id: "",
+    password: "",
+    email: "",
   });
 
   //! 폼 입력 오류 메시지 상태 관리
@@ -47,7 +47,7 @@ export default function UseState04() {
     id: '',
     password: '',
     email: ''
-  })
+  });
 
   //! 각 입력 필드 변수 선언 (비구조화 할당)
   const { id, password, email } = formData;
@@ -56,9 +56,6 @@ export default function UseState04() {
   const handleSignUpSubmit = (e: React.FormEvent) => {
     //? 폼 제출에 대한 기본 동작을 방지
     e.preventDefault();
-    //a 태그나 submit 태그는 누르게 되면 href 를 통해 이동하거나 , 창이 새로고침(초기화)하여 실행됩니다.
-    //preventDefault 를 통해 이러한 동작을 막아줄 수 있습니다.
-
 
     //? 임시 오류 메시지 객체 생성
     // >> 아이디, 비밀번호, 이메일 순으로 오류 메시지를 담아두는 객체
@@ -93,7 +90,6 @@ export default function UseState04() {
     }
 
     //? 오류 상태를 업데이트
-    //상태 관리의 일관성: tempErrors를 사용하면, 상태 관리가 더 일관되게 유지됩니다. 오류 메시지와 폼 데이터의 상태를 별도로 관리하므로, 오류 메시지를 폼의 상태와 독립적으로 업데이트하고 관리할 수 있습니다.
     setErrors(tempErrors);
 
     //? 모든 입력이 유효한 경우
@@ -121,9 +117,9 @@ export default function UseState04() {
       // 기존 폼 데이터의 값을 복사 (스프레드 연산자)
       ...formData,
 
-      // 변경된 필드의 값을 업데이트(속성값임을 명시하기위해 []사용)
+      // 변경된 필드의 값을 업데이트
       [name]: value
-    })
+    });
   }
 
   return (
@@ -147,7 +143,7 @@ export default function UseState04() {
               onChange={handleInputChange}
             />
           </label>
-          {errors.id && (<p style={{color: 'red'}}>{errors.id}</p>)}
+          {errors.id && (<p style={{ color: 'red'}}>{errors.id}</p>)}
         </div>
         <div>
           <label>
@@ -159,7 +155,7 @@ export default function UseState04() {
               onChange={handleInputChange}
             />
           </label>
-          {errors.password && (<p style={{color: 'red'}}>{errors.password}</p>)}
+          {errors.password && (<p style={{ color: 'red'}}>{errors.password}</p>)}
         </div>
         <div>
           <label>
@@ -171,7 +167,7 @@ export default function UseState04() {
               onChange={handleInputChange}
             />
           </label>
-          {errors.email && (<p style={{color: 'red'}}>{errors.email}</p>)}
+          {errors.email && (<p style={{ color: 'red'}}>{errors.email}</p>)}
         </div>
         <button type="submit">회원가입</button>
       </form>

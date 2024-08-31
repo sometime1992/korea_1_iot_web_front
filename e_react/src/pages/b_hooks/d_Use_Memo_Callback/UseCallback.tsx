@@ -10,15 +10,12 @@ const Button = React.memo(({handleClick}: { handleClick: () => void }) => {
   return <button onClick={handleClick}>클릭</button>
 });
 
-
-
-
 //# 부모 컴포넌트
 export default function UseCallback() {
   const [count, setCount] = useState<number>(0);
   const [text, setText] = useState<string>("");
 
-  // 부모 컴포넌트에서 정의한 이벤트 핸들러
+  // 부모 컴포넌트에서 정의한 이벤트 핸들러ㅇ
   // : useCallback을 사용하여 함수의 동일한 인스턴스를 유지
 
   // >> 2개의 인수 전달
@@ -27,7 +24,7 @@ export default function UseCallback() {
   const handleCountClick = useCallback(() => {
     setCount(prevCount => prevCount + 1)
   }, [count]);
-
+  
   return (
     <div>
       <h3>useCallback</h3>

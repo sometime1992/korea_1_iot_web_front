@@ -5,7 +5,6 @@ type UserType = {
   height: number;
 }
 
-
 type ChildProps = {
   userData: UserType | undefined
 }
@@ -13,7 +12,7 @@ type ChildProps = {
 export default function ChildComponent({ userData }: ChildProps) {
   return (
     <div>
-      <p>자식 컴포넌트(부모로 부터 데이터를 전달 받음)</p>
+      <p>자식 컴포넌트(부모로 부터 데이터를 전달받음)</p>
       {userData && (
         // JSX에서 소괄호 내의 UI 구현부가 비워질 경우 오류
         <>

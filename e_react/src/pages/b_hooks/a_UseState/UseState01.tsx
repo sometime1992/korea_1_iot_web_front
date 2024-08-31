@@ -22,7 +22,6 @@ import React, { useState } from 'react'
 
 export default function UseState01() {
   //! useState의 기본 구문
-  //! userState 자체가 비동기적으로 실행
   // const [state, setState] = useState<type>(initialValue);
 
   // - state: 현재의 상태값(변수)
@@ -36,7 +35,6 @@ export default function UseState01() {
 
   const [count, setCount] = useState<number>(0);
   const [message, setMessage] = useState<string>('안녕하세요');
-  //! ****일반 변수 let으로 변수를 생성해서 return값으로 넘겨줘도 리엑트는 변화를 감지하지 않는다.****
 
   const handleUpClick = () => {
     // 상태(count)를 1 증가
@@ -51,7 +49,6 @@ export default function UseState01() {
 
     // 2) 함수형 업데이트를 사용
     // >> 이전 상태 값을 기반으로 상태를 업데이트 하는 경우 (권장)
-    //! 동기적으로 실행
     setCount(prevCount => prevCount + 1 ); // 0 + 1
     setCount(prevCount => prevCount + 1 ); // 1 + 1
     setCount(prevCount => prevCount + 1 ); // 2 + 1

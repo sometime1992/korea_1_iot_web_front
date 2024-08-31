@@ -16,7 +16,7 @@ export default function UseState05() {
     id: 0,
     name: "",
   });
-  // 배열의 경우 초기값에 주로 [] 빈 배열 설정
+  // 배열의 경우 초기값에 주로 []빈 배열 설정
   const [items, setItems] = useState<string[]>([]);
 
   const handleUserChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,7 +45,7 @@ export default function UseState05() {
       <h5>여러 타입의 상태 관리</h5>
 
       {/* 숫자형: 카운터 증가 버튼 */}
-      <p>count: {count}</p>
+      <p>Count: {count}</p>
       <button
         onClick={() => {
           setCount((prevCount) => prevCount + 1);
@@ -61,19 +61,22 @@ export default function UseState05() {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
+
       {/* 논리형: 토글 버튼 */}
-      <p>isVisiable? : {isVisiable ? "Yes" : "No"}</p>
+      <p>Visiable? : {isVisiable ? "Yes" : "No"}</p>
       <button onClick={() => setIsVisiable(!isVisiable)}>토글 버튼</button>
 
       {/* 객체: 사용자 정보 수정 입력 필드 */}
       {/* 
-        객체의 속성 데이터는 HTML 영역 내에 출력이 가능
+        객체의 속성 데이터는 HTML 영역 내에 출력 가능
         >> 객체 구조 자체는 출력 불가!
-        >> 객체를 문자열 형식 (JSON 형식으로 변환 후)으로 출력
+        >> 객체를 문자열 형식(JSON 형식으로 변환 후)으로 출력
       */}
 
-      <p>User: {user.name}</p>
-      <p>Use: {JSON.stringify(user)}</p>
+      <p>
+        User: {user.id} {user.name}
+      </p>
+      <p>User2: {JSON.stringify(user)}</p>
 
       <input
         type="text"
@@ -83,7 +86,7 @@ export default function UseState05() {
         onChange={handleUserChange}
       />
       <input
-        type="text"
+        type="number"
         name="id"
         value={user.id}
         placeholder="사용자 아이디"

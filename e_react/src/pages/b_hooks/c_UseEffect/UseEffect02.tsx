@@ -4,9 +4,8 @@ import React, { useEffect, useState } from "react";
 // >> async, await, fetch()
 
 // - 게시물을 가져오기
-//    >> 로딩, 성공, 실패
-//    >> 해당 컴포넌트가 마운팅될 때만 실행
-// 클릭할때마다 리랜더링되는걸 방지
+//   >> 로딩, 성공, 실패
+//   >> 해당 컴포넌트가 마운팅될 때만 실행
 
 //? 각 게시물 데이터 타입 정의
 type Post = {
@@ -18,7 +17,7 @@ type Post = {
 export default function UseEffect02() {
   //? 게시물 상태 관리
   const [posts, setPosts] = useState<Post[]>([]);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   //? 로딩 상태 & 에러 상태 관리
   const [loading, setLoading] = useState<boolean>(false);
@@ -32,7 +31,6 @@ export default function UseEffect02() {
     try {
       const response = await fetch(
         `https://jsonplaceholder.typicode.com/posts`
-        // `https://jsonplaceholder.typicode.com/post` - Error
       );
 
       if (!response.ok) {
@@ -45,7 +43,7 @@ export default function UseEffect02() {
       setLoading(false);
     } catch (e) {
       setLoading(false);
-      setError((e as Error).message); // 자바스크립트의 Error로 단언해줘야 메세지값을 가져올 수 있다
+      setError((e as Error).message);
     }
   }
 
@@ -56,7 +54,7 @@ export default function UseEffect02() {
   }, []);
 
   const filteredPosts = posts.filter(post => 
-    post.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+    post.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -70,13 +68,13 @@ export default function UseEffect02() {
     >
       <h3>Posts 게시물</h3>
 
-      {/*
+      {/* 
         <button onClick={fetchPosts}>게시물 불러오기</button> 
       */}
 
       <input
         type="text"
-        placeholder="검색어를 입력하세요"
+        placeholder="검색어를 입력하세요."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
