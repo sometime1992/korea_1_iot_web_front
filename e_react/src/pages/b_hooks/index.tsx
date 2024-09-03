@@ -22,6 +22,7 @@ import Custom02 from "./f_CustomHook/Custom02";
 
 import WebCamPractice from "./Practice01";
 import WebcamDrawingApp from "./Practice02";
+
 import { useLocation } from "react-router-dom";
 
 // 전체 파일 정렬
@@ -30,6 +31,7 @@ import { useLocation } from "react-router-dom";
 function Index() {
   const location = useLocation();
   const { username } = location.state || {};
+
   return (
     <div>
       <h1 style={{ backgroundColor: "black", color: "white" }}>

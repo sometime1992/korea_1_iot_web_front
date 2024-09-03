@@ -11,6 +11,7 @@ import RouterComponent from './pages/c_Router';
 import RouterHook from './pages/d_RouterHook';
 import Axios from './pages/e_Axios';
 import GlobalState from './pages/f_GlobalState';
+import Style from './pages/g_Style/Style01';
 
 import Parent from './pages/c_Router/Parent';
 
@@ -18,20 +19,22 @@ import Example01 from './pages/c_Router/Example01';
 import Example02 from './pages/c_Router/Example02';
 
 import Todos01 from './pages/z_todos';
+
 // 전역 상태 관리 예제
-import { useCountStore } from './pages/f_GlobalState/Zustand01';
+// import { useCountStore } from './pages/f_GlobalState/Zustand01';
 
 //! 리액트 프로젝트 개발 실행 명령어
 // npm run start
 // : http://localhost:3000 환경에서 실행
 
 function App() {
-  const { count } = useCountStore();
+  // const { count } = useCountStore();
+
   return (
     <div>
       <h1>React Project</h1>
       <NaviBar />
-      <p>{count}</p>
+      {/* <p>{count}</p> */}
 
       {/* Routes태그: Route를 감싸는 컴포넌트 */}
       <Routes>
@@ -65,6 +68,7 @@ function App() {
         <Route path='routerHook' element={<RouterHook />} />
         <Route path='axios' element={<Axios />} />
         <Route path='globalState' element={<GlobalState />} />
+        <Route path='style' element={<Style />} />
 
         {/* 예제 (참고용) */}
         <Route path='/todos01' element={<Todos01 />} />

@@ -105,7 +105,7 @@ export default function Axios01() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    //input창에서 바로 수정하기위해
+
     setNewUser({
       ...newUser,
       [name]: value,
@@ -172,7 +172,7 @@ export default function Axios01() {
     }
   };
 
-  //# axiost를 사용하는 delete 요청 (삭제하다)
+  //# axios를 사용하는 delete 요청 (삭제하다)
   const deleteUser = async (id: number) => {
     try {
       await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
