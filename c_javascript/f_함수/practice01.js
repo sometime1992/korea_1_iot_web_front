@@ -12,6 +12,10 @@ const subtract = function(a, b) {
 }
 
 // multiply(화살표 함수)
+// const multiply = (a, b) => {
+//   return a * b;
+// }
+// 리턴값이 한줄이면 중괄호 생략이 가능하다
 const multiply = (a, b) => a * b;
 
 // a = 10, b = 5 (매개변수와 인자값 구분)

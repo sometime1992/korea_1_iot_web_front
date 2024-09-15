@@ -23,10 +23,11 @@
 //& 콜백 함수 예제
 
 // 1) 선언적 함수를 사용한 콜백 함수 구현
-console.log('=== 콜백함수: 선언적 함수 ===');
+console.log("=== 콜백함수: 선언적 함수 ===");
 
 // 0부터 2까지를 "콘솔창에 출력" >> 3번 실행
-function callback1(callbackFunc) { // callbackFunc 매개변수 (함수를 데이터로 전달받음)
+function callback1(callbackFunc) {
+  // callbackFunc 매개변수 (함수를 데이터로 전달받음)
 
   // 함수 내부에서 다양한 기능, 동작 작성 가능
 
@@ -35,7 +36,7 @@ function callback1(callbackFunc) { // callbackFunc 매개변수 (함수를 데�
   }
 }
 // cf) let callbackFunc = (index) => {
-  // console.log(`${index}번째 함수 호출`);
+// console.log(`${index}번째 함수 호출`);
 // }
 
 // 복잡한 로직 (예시)
@@ -46,35 +47,38 @@ function print(index) {
 callback1(print); // print함수(콜백함수)를 callback1(메인로직)의 인자로 전달
 
 // 2) 익명함수를 사용한 콜백 함수 구현
-console.log('=== 콜백함수: 익명 함수 ===');
+console.log("=== 콜백함수: 익명 함수 ===");
 
 // 복잡한 로직 (예시)
 const print2 = function (count) {
   console.log(`${count}번째 함수 호출`);
-}
+};
 
 callback1(print2); // print2함수(콜백함수)를 callback1(메인로직)의 인자로 전달;
 
 // 3) 화살표 함수를 사용한 콜백 함수 구현
-console.log('=== 콜백함수: 화살표 함수 ===');
+console.log("=== 콜백함수: 화살표 함수 ===");
 
-function callback2(number, callbackFunc, other) { // number 변수(데이터), callbackFunc 함수
+function callback2(number, callbackFunc, other) {
+  // number 변수(데이터), callbackFunc 함수
   // number의 값이 짝수인 경우 callbackFunc로 데이터 전달
 
   if (number % 2 === 0) {
     callbackFunc(number);
+    //callbackFunc(print3())
   } else {
-    other(number)
+    other(number);
+    //other(print4())
   }
 }
 
 const print3 = (even) => {
   console.log(`${even}은 짝수입니다.`);
-}
+};
 
 const print4 = (odds) => {
   console.log(`${odds}는 홀수입니다.`);
-}
+};
 
 callback2(3, print3, print4); // 메인 로직에 데이터(number)와 콜백함수(print3)를 전달
 callback2(4, print3);
